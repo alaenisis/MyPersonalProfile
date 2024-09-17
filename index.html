@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+    <link rel="stylesheet"  media="screen and (max-width:530)" href="phone.css">
+</head>
+<body>
+    <header id="MainHeader">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM <br> <em>BAYANDA MLOMO</em></h1>
+            <button class="btn" onclick="scrollToContact()">
+                Hire Me
+            </button> 
+        </div>
+    </section>
+    <section id="about">
+        <div id="pic">
+            <h1 class="headings">ABOUT ME</h1>
+        </div>
+        <div id="intro">
+            <h2>BAYANDA MLOMO</h2>
+            <p id="about-text">I am what I call the 3 C's, Calm Cool & Collected. Acquiring Computer Science skills has enabled me to bring my buzzing ideas alive. Even further,has improved my problem-solving skills. Hence why I love working in the backend.</p>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <a href="https://github.com/alaenisis/-Astrophile-Nova-s-Skin-Care-">
+                <img src="Resources/Astrophile.png" alt="Beauty Clinic Booking System">
+                <p>Beauty Clinic Booking System</p>
+            </a>
+            <a href="#">
+                <img src="Resources/d60f0f.jpg" alt="Know My Roots Chatbot">
+                <p>Know My Roots Chatbot</p>
+            </a>
+        </div>
+    </section>
+    
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="Resources/softwareDev.png" alt="">
+                <h1 class="headings">SOFTWARE DEVELOPER</h1>
+                <p>As a committed software developer, I excel in building robust and scalable applications tailored to both user and business requirements.
+                   With expertise in programming languages like Java, Python, and C++, I create software solutions that are efficient, dependable, and maintainable.
+                   My experience includes developing intricate systems, ranging from backend services to intuitive user interfaces, with a strong focus on advanced OOP concepts and SQL database management.
+                   I am passionate about crafting clean, optimized code and staying updated with the latest technologies to remain at the cutting edge of the industry.
+                </p>
+            </div>
+            <div class="box">
+                <img src="Resources/server.png" alt="">
+                <h1 class="headings">DATABASE ADMINSTRATOR</h1>
+                <p> As a skilled database administrator, I specialize in managing and optimizing databases to ensure data integrity, security, and performance. 
+                    With extensive experience in SQL and database management systems, I design and maintain efficient, scalable databases that support critical business operations.
+                    My expertise includes database installation, configuration, backup, recovery, and performance tuning, as well as implementing security protocols to safeguard sensitive information.
+                    I am dedicated to ensuring databases run smoothly and efficiently, while staying current with the latest advancements in database technologies and best practices.
+                </p>
+            </div>
+            <div class="box">
+                <img src="Resources/graphic-design.png" alt="">
+                <h1 class="headings">WEB DESIGN</h1>
+                <p> I specialize in creating responsive, visually appealing websites that combine aesthetic design with seamless functionality.
+                    I have experience developing a variety of web solutions, from sleek corporate sites to dynamic portfolios and engaging e-commerce platforms.
+                    My approach emphasizes user experience, ensuring that every website I create is fully responsive and intuitive across all devices.
+                    With a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React, I bring your ideas to life through clean, efficient code and thoughtful design.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="headings"><u>CONTACT ME </u></h1>
+        <form id="contact-form" class="form" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="input" placeholder="Enter Your Name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="input" placeholder="Enter Your Email">
+            
+            <label for="message">Message:</label>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Write Your Message"></textarea>
+            
+            <input type="submit" value="SEND" id="send">
+        </form>
+        
+    </section>
+    <footer>
+        <p>&copy; 2024 My Profile | <a href="#home">Start Again Policy</a></p>
+    </footer>
+
+    <script>
+        function validateForm() {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("msg").value;
+      
+          if (name === "" || email === "" || message === "") {
+            alert("All fields are required.");
+            return false;
+          }
+          alert("Message sent successfully!");
+          // Implement email sending functionality here
+          return true;
+        }
+
+        function scrollToContact() {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }
+      </script>
+      
+    
+</body>
+</html>
