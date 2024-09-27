@@ -1,0 +1,408 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.headings{
+    color:rgb(98, 0, 255);
+    font-size: 2.5rem;
+    text-shadow:5px 2.3px #1f1f1f;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.85;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bb86fc;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 180px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: rgb(98, 0, 255);
+    margin: 0;
+
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #020202;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.cta-btn {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.8s ease forwards;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #3700b3;
+}
+
+/* Typing effect */
+.typewriter {
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid;
+    white-space: nowrap;
+    animation: typing 2.25s steps(40, end), .65s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 70%; }
+    to { width: 100%; }
+}
+
+
+
+/* Fade-up animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+/* ABOUT ME*/
+#about{
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+#about h2{
+    color:rgb(98, 0, 255);
+    font-size: 2.5rem;
+    text-shadow:5px 2.3px #1f1f1f;
+}
+
+#about-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slight border for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+    backdrop-filter: blur(5px); /* Optional: Blurs the background behind the card */
+    color: #e0e0e0;
+    text-align: left;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+#about-card p {
+    margin: 0;
+    line-height: 1.6;
+}
+#about p{
+    font-size: 1.2rem;
+    color: #020202;
+    font-weight: bold;
+}
+#readMoreBtn {
+    background-color:#bb86fc;;
+    border: 2px solid ;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#readMoreBtn:hover {
+    background-color: #3700b3;
+    color: black;
+}
+
+/* Carousel Section */
+#carousel {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%; /* Ensure each image takes up full width of the container */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Fixed size for carousel images */
+.carousel-image {
+    width: 800px;
+    height: 500px;
+    object-fit: cover; /* This ensures the image covers the whole area without stretching */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Skills Section */
+#skills {
+    background-color: #1f1f1f;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.skill-card {
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background-color: #bb86fc;
+    height: 100%;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-card:hover .progress {
+    background-color: #6200ee; /* Slightly darker purple on hover */
+}
+
+@media (min-width: 768px) {
+    .skill-card {
+        width: 45%;
+    }
+}
+/*Projects*/
+.project-card{
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slight border for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+    backdrop-filter: blur(5px); /* Optional: Blurs the background behind the card */
+    color: #e0e0e0;
+    text-align: left;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.project-card p{
+    color:  #020202;
+    font-weight: 700;
+}
+.btn-view-project{
+    border-radius: 2px;
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+
+}
+/*contact*/
+
+#contact {
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input, #msg {
+    padding: 15px;
+    margin: 10px 0;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+#send {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(6, 1, 51);
+    color: aquamarine;
+    border: none;
+    cursor: pointer;
+}
+
+#send:hover {
+    background-color: cyan;
+    color: rgb(6, 1, 51);
+    box-shadow: 0 0 10px rgb(6, 1, 51);
+}
+
+.error{
+    color: red;
+}
+
+/* Scroll-based animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/*Footer*/
+footer{
+    background-color: darkslategrey;
+    opacity: 0.8;
+    color: rgb(6, 1, 51);;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid rgb(46, 54, 54);
+    height: 100px;
+    font-weight: bolder;
+}
+.footer-details{
+    padding-left:30px;
+}
+
+#social {
+    margin :40px;
+    padding-right: 25px;
+}
+
+
+#social a img{
+    width:32px;
+    height: 33px;
+}
