@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayanda Mlomo - Portfolio</title>
+    <link rel="stylesheet" href="assests/css/styles.css">
+</head>
+<body style="background: url(assests/img/pexels-pixabay-2150.jpg) no-repeat fixed center;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="typewriter">Hi I am,<br> Bayanda Mlomo</h1>
+            <p class="fade-up">Passionate Backend Developer | Java | Kotlin | Cybersecurity</p>
+            <a href="#projects"><button class="cta-btn fade-up">View My Work</button></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div id="about-card">
+            <p> As a final year Computer Science student at <i>Tshwane University of Technology(TUT)</i>, I am deeply passionate about backend software development
+                <span id="dots">...</span><span id="more" style="display: none;">
+                    and connecting ideas into reality using the backend. Currently, I am doing my software development internship at <i>Mphoti Consulting</i>. My studies isn't all about me. Aside from it, I am a creative individual who has done few projects outside the world of Computer Science. From organsising and executing events to being part of a soccer team that took up the 3rd spot in a TUT held competition. Notable, I have also recently led a fight in overturning rejected Bursary statuses of over 30 students to being funded. All the aspects I have ventured into, contributed to the individual I am today.
+                </span>
+            </p>
+            <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+        
+        </div>
+    </section>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="assests/img/Ral.jpeg" alt="Image 1" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-08-01 at 01.52.36.jpeg" alt="Image 2" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-09-26 at 09.00.27.jpeg" alt="Image 3" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-09-26 at 09.00.27 (1).jpeg" alt="Image 4" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-08-02 at 14.58.42.jpeg" alt="Image 5" class="carousel-image">
+                <img src="assests/img/Screenshot 2024-09-26 085353.png" alt="Image 6" class="carousel-image">
+                <img src="assests/img/Screenshot 2024-09-26 085426.png" alt="Image 7" class="carousel-image">
+
+
+
+                <!-- Add more images if needed -->
+            </div>
+            <button class="carousel-btn prev-btn" onclick="prevImage()">&#10094;</button>
+            <button class="carousel-btn next-btn" onclick="nextImage()">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="skills">
+    <h2 class="headings">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <span class="skill-name">Java</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">PHP</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 50%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">HTML, CSS & JavaScript</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">Kotlin</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 55%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">React JS</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+</section>
+
+
+    <section id="projects">
+        <h2 class="headings">Projects</h2>
+        <div class="project-card fade-in">
+            <h3>Mother M's Food Truck</h3>
+            <p>It is a ordering bussiness site for a food truck trailer. It is important it does not deliver. It eliminates the need for customers to order and wait for their food around lunchtime. Their food will be readily be available beforehand. </p>
+            <a href="https://github.com/123-git2/Mamazala.git">View on GitHub</a>
+        </div>  
+        <!-- Add more projects -->
+    </section>
+
+    <section id="contact">
+        <h2 class="headings">Contact Me</h2>
+        <form action="#" class="form" id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="input" placeholder="Enter Your Name" >
+            <div class="error"></div>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <div class="error"></div>
+
+            <label for="message">Message:</label>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Write Your Message"></textarea>
+            <div class="error"></div>
+
+            <input type="submit" value="SEND" id="send" onclick="checkValidation()">
+        </form>    
+    </section>
+
+    <footer>
+        <div class="footer-details">
+            <p>&copy; 2024 Bayanda Mlomo</p>         
+        </div>
+        <div id="social">
+            <a href="mailto:bayandamlomo1@gmail.com"><img src="assests/img/email.png" alt="EMAIL-ICON"></a>
+            <a href="https://github.com/alaenisis"><img src="assests/img/github.png"></a>
+            <a href="https://www.linkedin.com/in/bayanda-mlomo-74a781312"><img src="assests/img/linkedin.png"></a>
+   
+        </div>
+        
+        
+    </footer>
+
+    <script src="assests/js/script.js"></script>
+</body>
+</html>
