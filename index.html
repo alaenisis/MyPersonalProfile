@@ -3,128 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
-    <link rel="stylesheet"  media="screen and (max-width:530)" href="phone.css">
+    <title>Bayanda Mlomo - Portfolio</title>
+    <link rel="stylesheet" href="assests/css/styles.css">
 </head>
-<body>
-    <header id="MainHeader">
-        <nav class="navbar">
+<body style="background: url(assests/img/pexels-pixabay-2150.jpg) no-repeat fixed center;">
+    <header>
+        <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section id="home">
-        <div class="main">
-            <h1 class="headings">I AM <br> <em>BAYANDA MLOMO</em></h1>
-            <button class="btn" onclick="scrollToContact()">
-                Hire Me
-            </button> 
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="typewriter">Hi I am,<br> Bayanda Mlomo</h1>
+            <p class="fade-up">Passionate Backend Developer | Java | Kotlin | Cybersecurity</p>
+            <a href="#projects"><button class="cta-btn fade-up">View My Work</button></a>
         </div>
     </section>
+
     <section id="about">
-        <div id="pic">
-            <h1 class="headings">ABOUT ME</h1>
-        </div>
-        <div id="intro">
-            <h2>BAYANDA MLOMO</h2>
-            <p id="about-text">I am what I call the 3 C's, Calm Cool & Collected. Acquiring Computer Science skills has enabled me to bring my buzzing ideas alive. Even further,has improved my problem-solving skills. Hence why I love working in the backend.</p>
-        </div>
-    </section>
-    
-    <section id="portfolio">
-        <h1 class="headings">PORTFOLIO</h1>
-        <div class="gallery">
-            <a href="https://github.com/alaenisis/-Astrophile-Nova-s-Skin-Care-">
-                <img src="Resources/Astrophile.png" alt="Beauty Clinic Booking System">
-                <p>Beauty Clinic Booking System</p>
-            </a>
-            <a href="#">
-                <img src="Resources/d60f0f.jpg" alt="Know My Roots Chatbot">
-                <p>Know My Roots Chatbot</p>
-            </a>
-        </div>
-        <h1>first edit</h1>
-    </section>
-    
-    <section id="services">
-        <h1 class="headings">SERVICES</h1>
-        <div class="row">
-            <div class="box">
-                <img src="Resources/softwareDev.png" alt="">
-                <h1 class="headings">SOFTWARE DEVELOPER</h1>
-                <p>As a committed software developer, I excel in building robust and scalable applications tailored to both user and business requirements.
-                   With expertise in programming languages like Java, Python, and C++, I create software solutions that are efficient, dependable, and maintainable.
-                   My experience includes developing intricate systems, ranging from backend services to intuitive user interfaces, with a strong focus on advanced OOP concepts and SQL database management.
-                   I am passionate about crafting clean, optimized code and staying updated with the latest technologies to remain at the cutting edge of the industry.
-                </p>
-            </div>
-            <div class="box">
-                <img src="Resources/server.png" alt="">
-                <h1 class="headings">DATABASE ADMINSTRATOR</h1>
-                <p> As a skilled database administrator, I specialize in managing and optimizing databases to ensure data integrity, security, and performance. 
-                    With extensive experience in SQL and database management systems, I design and maintain efficient, scalable databases that support critical business operations.
-                    My expertise includes database installation, configuration, backup, recovery, and performance tuning, as well as implementing security protocols to safeguard sensitive information.
-                    I am dedicated to ensuring databases run smoothly and efficiently, while staying current with the latest advancements in database technologies and best practices.
-                </p>
-            </div>
-            <div class="box">
-                <img src="Resources/graphic-design.png" alt="">
-                <h1 class="headings">WEB DESIGN</h1>
-                <p> I specialize in creating responsive, visually appealing websites that combine aesthetic design with seamless functionality.
-                    I have experience developing a variety of web solutions, from sleek corporate sites to dynamic portfolios and engaging e-commerce platforms.
-                    My approach emphasizes user experience, ensuring that every website I create is fully responsive and intuitive across all devices.
-                    With a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React, I bring your ideas to life through clean, efficient code and thoughtful design.
-                </p>
-            </div>
+        <h2>About Me</h2>
+        <div id="about-card">
+            <p> As a final year Computer Science student at <i>Tshwane University of Technology(TUT)</i>, I am deeply passionate about backend software development
+                <span id="dots">...</span><span id="more" style="display: none;">
+                    and connecting ideas into reality using the backend. Currently, I am doing my software development internship at <i>Mphoti Consulting</i>. My studies isn't all about me. Aside from it, I am a creative individual who has done few projects outside the world of Computer Science. From organsising and executing events to being part of a soccer team that took up the 3rd spot in a TUT held competition. Notable, I have also recently led a fight in overturning rejected Bursary statuses of over 30 students to being funded. All the aspects I have ventured into, contributed to the individual I am today.
+                </span>
+            </p>
+            <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+        
         </div>
     </section>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="assests/img/Ral.jpeg" alt="Image 1" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-08-01 at 01.52.36.jpeg" alt="Image 2" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-09-26 at 09.00.27.jpeg" alt="Image 3" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-09-26 at 09.00.27 (1).jpeg" alt="Image 4" class="carousel-image">
+                <img src="assests/img/WhatsApp Image 2024-08-02 at 14.58.42.jpeg" alt="Image 5" class="carousel-image">
+                <img src="assests/img/Screenshot 2024-09-26 085353.png" alt="Image 6" class="carousel-image">
+                <img src="assests/img/Screenshot 2024-09-26 085426.png" alt="Image 7" class="carousel-image">
+
+
+
+                <!-- Add more images if needed -->
+            </div>
+            <button class="carousel-btn prev-btn" onclick="prevImage()">&#10094;</button>
+            <button class="carousel-btn next-btn" onclick="nextImage()">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="skills">
+    <h2 class="headings">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <span class="skill-name">Java</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">PHP</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 50%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">HTML, CSS & JavaScript</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">Kotlin</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 55%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <span class="skill-name">React JS</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+</section>
+
+
+    <section id="projects">
+        <h2 class="headings">Projects</h2>
+        <div class="project-card fade-in">
+            <h3>Mother M's Food Truck</h3>
+            <p>It is a ordering bussiness site for a food truck trailer. It is important it does not deliver. It eliminates the need for customers to order and wait for their food around lunchtime. Their food will be readily be available beforehand. </p>
+            <a href="https://github.com/123-git2/Mamazala.git">View on GitHub</a>
+        </div>  
+        <!-- Add more projects -->
+    </section>
+
     <section id="contact">
-        <h1 class="headings"><u>CONTACT ME </u></h1>
-        <form id="contact-form" class="form" onsubmit="return validateForm()">
+        <h2 class="headings">Contact Me</h2>
+        <form action="#" class="form" id="contactForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" class="input" placeholder="Enter Your Name">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name" >
+            <div class="error"></div>
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" class="input" placeholder="Enter Your Email">
-            
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <div class="error"></div>
+
             <label for="message">Message:</label>
             <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Write Your Message"></textarea>
-            
-            <input type="submit" value="SEND" id="send">
-        </form>
-        
+            <div class="error"></div>
+
+            <input type="submit" value="SEND" id="send" onclick="checkValidation()">
+        </form>    
     </section>
+
     <footer>
-        <p>&copy; 2024 My Personal Profile | <a href="#home">Start Again Policy</a></p>
+        <div class="footer-details">
+            <p>&copy; 2024 Bayanda Mlomo</p>         
+        </div>
+        <div id="social">
+            <a href="mailto:bayandamlomo1@gmail.com"><img src="assests/img/email.png" alt="EMAIL-ICON"></a>
+            <a href="https://github.com/alaenisis"><img src="assests/img/github.png"></a>
+            <a href="https://www.linkedin.com/in/bayanda-mlomo-74a781312"><img src="assests/img/linkedin.png"></a>
+   
+        </div>
+        
+        
     </footer>
 
-    <script>
-        function validateForm() {
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("msg").value;
-      
-          if (name === "" || email === "" || message === "") {
-            alert("All fields are required.");
-            return false;
-          }
-          alert("Message sent successfully!");
-          // Implement email sending functionality here
-          return true;
-        }
-
-        function scrollToContact() {
-            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-        }
-      </script>
-      
-    
+    <script src="assests/js/script.js"></script>
 </body>
 </html>
