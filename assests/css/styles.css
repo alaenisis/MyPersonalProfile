@@ -411,6 +411,8 @@ footer{
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
+        background-size: cover;
+        background-position: center center;
     }
 
     /* Navigation */
